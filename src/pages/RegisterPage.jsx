@@ -38,7 +38,7 @@ const RegisterPage = () => {
       })}
       <form
         onSubmit={onSubmit}
-        className="flex flex-col mx-auto w-2/6 gap-3 justify-center mt-[5%]"
+        className="flex flex-col mx-auto md:w-2/6 gap-3 justify-center mt-[5%] sm:w-[80%]"
       >
         <input
           type="text"
