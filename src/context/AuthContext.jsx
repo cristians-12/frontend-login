@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useContext, useEffect } from "react";
-import { soliRegistro, soliLogin } from "../api/auth";
+import { soliRegistro, soliLogin, verifToken } from "../api/auth";
+import Cookies from "js-cookie";
 // import { use } from "express/lib/application";
 
 export const AuthContext = createContext();
@@ -26,19 +27,20 @@ export const AuthProvider = ({ children }) => {
       setisAuthenticated(true);
     } catch (error) {
       setErrors(error.response.data);
-      console.log(error)
+      console.log(error);
     }
   };
   const signIn = async (user) => {
     try {
       const resp = await soliLogin(user);
       // console.log(resp);
+      setUser(resp.data);
       setisAuthenticated(true);
     } catch (error) {
       // console.log(error);
-      if(Array.isArray(error.response.data)){
+      if (Array.isArray(error.response.data)) {
         setErrors(error.response.data);
-      }else{
+      } else {
         setErrors([error.response.data.message]);
       }
     }
@@ -49,10 +51,31 @@ export const AuthProvider = ({ children }) => {
       const timer = setTimeout(() => {
         setErrors([]);
       }, 5000);
-      return ()=>{clearTimeout(timer)}
+      return () => {
+        clearTimeout(timer);
+      };
     }
   }, [errores]);
 
+  useEffect(() => {
+    async function checkLogin (){
+      const cookies = Cookies.get();
+      if(cookies.token){
+        try {
+          const resp = await verifToken(cookies.token);
+          console.log(resp)
+          if(!resp.data) setisAuthenticated(false);
+          setisAuthenticated(true)
+          setUser(resp.data)
+        } catch (error) {
+          console.log(error)
+          setisAuthenticated(false);
+          setUser(null)
+        }
+      }
+    }
+    checkLogin();
+  }, []);
   return (
     <AuthContext.Provider
       value={{ signUp, user, isAuthenticated, errores, signIn }}

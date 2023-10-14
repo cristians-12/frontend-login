@@ -16,7 +16,7 @@ const LoginPage = () => {
 
   const navigate = useNavigate();
   useEffect(() => {
-    if (isAuthenticated) navigate("/tasks");
+    // if (isAuthenticated) navigate("/tasks");
   }, [isAuthenticated, navigate]);
 
   return (
