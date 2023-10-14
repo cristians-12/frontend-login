@@ -15,7 +15,7 @@ const LoginPage = () => {
 
 useEffect(()=>{
    if(isAuthenticated) navigate('/tasks');
-},[isAuthentificated,navigate])
+},[isAuthenticated,navigate])
 
   return (
     <main className="flex flex-col justify-center items-center h-screen">
