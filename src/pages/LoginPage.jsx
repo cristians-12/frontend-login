@@ -21,7 +21,7 @@ const LoginPage = () => {
 
   return (
     <main className="flex flex-col justify-center items-center h-screen">
-      <h1 className="font-bold text-[20px] mb-3 text-orange-500">LOGIN</h1>
+      <h1 className="font-bold text-3xl mb-3 text-orange-500">LOGIN</h1>
       {errores.map((error, i) => {
         return (
           <div key={i} className="bg-red-700 w-[50%] text-center font-bold p-2">
