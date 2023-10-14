@@ -25,13 +25,13 @@ const LoginPage = () => {
       })}
       <form
         onSubmit={onSubmit}
-        className="flex flex-col mx-auto md:w-2/6 gap-3 justify-center mt-[5%] sm:w-[80%]"
+        className="flex flex-col mx-auto md:w-2/6 gap-3 justify-center mt-[5%] sm:w-[80%] "
       >
         <input
           type="email"
           name="email"
           // id=""
-          className="rounded p-1 border border-gray-300 focus:border-orange-500 focus:ring-blue-200 outline-none "
+          className="rounded p-1 border border-gray-300 focus:border-orange-500 focus:ring-blue-200 outline-none dark:placeholder:text-white placeholder:text-black"
           {...register("email", { required: true })}
           placeholder="Email"
         />
@@ -44,7 +44,7 @@ const LoginPage = () => {
           type="password"
           name="password"
           // id=""
-          className="rounded p-1 border border-gray-300 focus:border-orange-500 focus:ring-blue-200 outline-none"
+          className="rounded p-1 border border-gray-300 focus:border-orange-500 focus:ring-blue-200 outline-none dark:placeholder:text-white placeholder:text-black"
           {...register("password", { required: true })}
           placeholder="Contraseña"
         />
