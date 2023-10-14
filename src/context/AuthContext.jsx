@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   const signIn = async (user) => {
     try {
       const resp = await soliLogin(user);
-      console.log(resp);
+      // console.log(resp);
       setisAuthenticated(true);
     } catch (error) {
       // console.log(error);

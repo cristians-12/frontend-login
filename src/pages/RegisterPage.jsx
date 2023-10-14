@@ -38,7 +38,7 @@ const RegisterPage = () => {
       })}
       <form
         onSubmit={onSubmit}
-        className="flex flex-col mx-auto md:w-2/6 gap-3 justify-center mt-[5%] sm:w-[80%]"
+        className="flex flex-col mx-auto md:w-3/6 gap-3 justify-center mt-[2%] w-[80%] rounded-lg"
       >
         <input
           type="text"
@@ -95,7 +95,7 @@ const RegisterPage = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320 "
-        className="absolute bottom-0"
+        className="md:block md:mt-[30%] absolute bottom-0 -z-1 md:bottom-[-20%]"
       >
         <path
           fill="#ff5500"
