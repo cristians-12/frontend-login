@@ -31,7 +31,7 @@ const LoginPage = () => {
           type="email"
           name="email"
           // id=""
-          className="rounded p-1 border border-gray-300 focus:border-orange-500 focus:ring-blue-200 outline-none dark:placeholder:text-white placeholder:text-black"
+          className="rounded p-1 border border-gray-300 focus:border-orange-500 focus:ring-blue-200 outline-none dark:placeholder:text-white dark:bg-dark bg-dark"
           {...register("email", { required: true })}
           placeholder="Email"
         />
@@ -44,7 +44,7 @@ const LoginPage = () => {
           type="password"
           name="password"
           // id=""
-          className="rounded p-1 border border-gray-300 focus:border-orange-500 focus:ring-blue-200 outline-none dark:placeholder:text-white placeholder:text-black"
+          className="rounded p-1 border border-gray-300 focus:border-orange-500 focus:ring-blue-200 outline-none dark:placeholder:text-white placeholder:text-black dark:bg-dark"
           {...register("password", { required: true })}
           placeholder="Contraseña"
         />
@@ -63,7 +63,7 @@ const LoginPage = () => {
       </form>
       <p className="mt-3 text-center">
         ¿Aún no tienes una cuenta?{" "}
-        <Link to="/register" className="text-orange-400">
+        <Link to="/register" className="text-orange-400 font-bold">
           ¡Unete!
         </Link>
       </p>
