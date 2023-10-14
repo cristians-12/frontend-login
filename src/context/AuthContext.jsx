@@ -33,6 +33,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const resp = await soliLogin(user);
       console.log(resp);
+      setisAuthenticated(true);
     } catch (error) {
       // console.log(error);
       if(Array.isArray(error.response.data)){

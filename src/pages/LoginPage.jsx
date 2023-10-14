@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { AuthContext, AuthProvider, useAuth } from "../context/AuthContext";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const LoginPage = () => {
   const {
@@ -8,10 +9,15 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { signIn, errores } = useAuth();
+  const { signIn, errores, isAuthenticated } = useAuth();
   const onSubmit = handleSubmit(async (valores) => {
     await signIn(valores);
   });
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (isAuthenticated) navigate("/tasks");
+  }, [isAuthenticated, navigate]);
 
   return (
     <main className="flex flex-col justify-center items-center h-screen">
