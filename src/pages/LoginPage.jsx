@@ -73,7 +73,7 @@ const LoginPage = () => {
           ¡Unete!
         </Link>
       </p>
-      <div className="overflow-hidden w-screen">
+      <div className="overflow-hidden w-screen h-[10%]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
