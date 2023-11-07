@@ -24,7 +24,9 @@ const RegisterPage = () => {
 
   return (
     <main className="h-screen flex justify-center flex-col">
-      <h1 className="text-center font-bold text-3xl text-orange-500">Register</h1>
+      <h1 className="text-center font-bold text-3xl text-orange-500">
+        Register
+      </h1>
       {errores.map((error, i) => {
         return (
           // eslint-disable-next-line react/jsx-key
@@ -38,7 +40,7 @@ const RegisterPage = () => {
       })}
       <form
         onSubmit={onSubmit}
-        className="flex flex-col mx-auto md:w-3/6 gap-3 justify-center mt-[2%] w-[80%] rounded-lg"
+        className="flex flex-col mx-auto md:w-3/6 gap-3 justify-center mt-[2%] w-[80%] rounded-lg z-10"
       >
         <input
           type="text"
@@ -86,20 +88,17 @@ const RegisterPage = () => {
           Registrarse
         </button>
       </form>
-      <p className="mt-3 text-center">
+      <p className="mt-3 text-center z-10">
         ¿Ya tienes una cuenta?{" "}
         <Link to="/login" className="text-orange-500 font-bold">
           ¡Inicia sesión!
         </Link>
       </p>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320 "
-        className="md:block md:mt-[30%] absolute bottom-0 -z-1 md:bottom-[-20%]"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+      className="md:block md:mt-[20%] absolute bottom-0 z-0">
         <path
           fill="#ff5500"
-          d="M0,160L48,149.3C96,139,192,117,288,96C384,75,480,53,576,58.7C672,64,768,96,864,144C960,192,1056,256,1152,240C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          d="M0,256L40,266.7C80,277,160,299,240,282.7C320,267,400,213,480,186.7C560,160,640,160,720,176C800,192,880,224,960,250.7C1040,277,1120,299,1200,288C1280,277,1360,235,1400,213.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
         ></path>
       </svg>
     </main>

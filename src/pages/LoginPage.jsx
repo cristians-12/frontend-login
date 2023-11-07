@@ -31,7 +31,7 @@ const LoginPage = () => {
       })}
       <form
         onSubmit={onSubmit}
-        className="flex flex-col mx-auto md:w-2/6 gap-3 justify-center mt-[5%] w-[80%] "
+        className="flex flex-col mx-auto md:w-2/6 gap-3 justify-center mt-[5%] w-[80%] z-10 "
       >
         <input
           type="email"
@@ -67,13 +67,13 @@ const LoginPage = () => {
           Iniciar sesión
         </button>
       </form>
-      <p className="mt-3 text-center z-1">
+      <p className="mt-3 text-center z-10">
         ¿Aún no tienes una cuenta?{" "}
         <Link to="/register" className="text-orange-400 font-bold">
           ¡Unete!
         </Link>
       </p>
-      <div className="overflow-hidden w-screen h-[10%]">
+      <div className="overflow-hidden w-screen">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
