@@ -67,17 +67,17 @@ const LoginPage = () => {
           Iniciar sesión
         </button>
       </form>
-      <p className="mt-3 text-center">
+      <p className="mt-3 text-center z-1">
         ¿Aún no tienes una cuenta?{" "}
         <Link to="/register" className="text-orange-400 font-bold">
           ¡Unete!
         </Link>
       </p>
-      <div className="overflow-hidden w-screen h-[10%] hidden">
+      <div className="overflow-hidden w-screen h-[10%]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
-          className="md:block md:mt-[20%] absolute bottom-0 -z-1"
+          className="md:block md:mt-[20%] absolute bottom-0 z-0"
         >
           <path
             fill="#ff5500"
