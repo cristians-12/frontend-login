@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useContext, useEffect } from "react";
 import { soliRegistro, soliLogin, verifToken } from "../api/auth";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 // import { use } from "express/lib/application";
 
 export const AuthContext = createContext();
